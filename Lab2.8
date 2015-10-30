@@ -1,0 +1,23 @@
+// task8.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "iostream"
+#include "bitset"
+
+using namespace std;
+
+int main()
+{
+	unsigned int A;
+	cin >> A;
+	cout << bitset<32>(A).to_string() << endl;
+	unsigned int i;
+	cin >> i;
+	A = (A << (31 - i));
+	A = A >> 31;
+	A = 1 & A;
+	cout << bitset<32>(A).to_string() << endl << A << endl;
+	system("pause");
+	return 0;
+}

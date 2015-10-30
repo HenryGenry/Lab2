@@ -1,0 +1,25 @@
+// task2.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "iostream"
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	unsigned int n;
+	unsigned int m;
+	unsigned int res;
+	cin >> n;
+	cin >> m;
+	if (n != m){
+		res = (1 << n) | (1 << m);
+	}
+	else
+		res = n << 1;
+	cout << res << endl; 
+	system("pause");
+	return 0;
+}
+

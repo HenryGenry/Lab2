@@ -1,4 +1,4 @@
-// task4.cpp : Defines the entry point for the console application.
+// task6.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -10,15 +10,12 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	unsigned int A;
-	unsigned int i;
 	cin >> A;
 	cout << bitset<32>(A).to_string() << endl;
+	unsigned int i;
 	cin >> i;
-	unsigned int res;
-	res = A | (1 << i);
-	//cout << bitset<32>(A).to_string() << endl;
-	cout << bitset<32>(res).to_string() << endl;
-	cout << res << endl;
+	A = A & ~(1 << i);
+	cout << bitset<32>(A).to_string() << endl << A;
 	system("pause");
 	return 0;
 }
